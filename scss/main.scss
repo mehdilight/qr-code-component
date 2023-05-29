@@ -1,0 +1,47 @@
+@import './vars';
+@import './base';
+
+
+.card-wrapper {
+    margin: 84px 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+        margin: 0;
+        height: 100vh;
+    }
+}
+
+.card {
+    --card-bg-color: hsl(0, 0%, 100%);
+    --card-text-color: hsl(220, 15%, 55%);
+
+    max-width: 320px;
+    background-color: var(--card-bg-color);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+    &__qr-code {
+        padding: 16px 16px 0;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    &__body {
+        padding: 0 2rem 2rem;
+    }
+
+    &__heading {
+        margin-bottom: 16px;
+    }
+
+    &__paragraph {
+        color: var(--card-text-color);
+    }
+}
